@@ -1,0 +1,16 @@
+version: '3'
+services:
+  azuresql:
+    image: azure-sql-edge:latest
+    container_name: sql
+    environment:
+      azuresql_user: SA
+      azuresql_password: 123sai123
+      azuresql_DB: hari
+    ports:
+      - "1433:1433⁠"
+    volumes:
+      - "azuresql_data:/var/lib/azuresql/data"
+
+volumes:
+  azuresql_data:
